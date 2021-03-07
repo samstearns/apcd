@@ -13,7 +13,7 @@ CREATE TABLE "NH_APCD"."PUBLIC"."REF_HCG" (
   "HCG_DESC_02" VARCHAR (20)
 );                                                                                                    
 
-DROP TABLE IF EXITS CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC"                                                                                                    
+DROP TABLE IF EXISTS "NH_APCD"."PUBLIC"."CLAIM_MC"                                                                                                    
 CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC" (
   "COVERAGE_CLASS" VARCHAR (3),
   "FROM_YEAR" VARCHAR (4), 
