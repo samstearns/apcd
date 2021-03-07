@@ -13,7 +13,7 @@ CREATE TABLE "NH_APCD"."PUBLIC"."REF_HCG" (
   "HCG_DESC_02" VARCHAR (20)
 );                                                                                                    
 
-                                                                                                    
+DROP TABLE IF EXITS CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC"                                                                                                    
 CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC" (
   "COVERAGE_CLASS" VARCHAR (3),
   "FROM_YEAR" VARCHAR (4), 
@@ -27,7 +27,7 @@ CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC" (
   "SV_STAT" VARCHAR (1), 
   "DIS_STAT" NUMBER (2,0), 
   "POS" VARCHAR (2), 
-  "AGE" NUMBER (3,0),   
+  "AGE" VARCHAR (3),   
   "SEX" VARCHAR (2), 
   "MEMBER_COUNTY" NUMBER (5,0), 
   "MEMBER_STATE" VARCHAR (2), 
