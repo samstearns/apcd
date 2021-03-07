@@ -27,7 +27,7 @@ CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC" (
   "SV_STAT" VARCHAR (1), 
   "DIS_STAT" NUMBER (2,0), 
   "POS" VARCHAR (2), 
-  "AGE" VARCHAR (3,0),   
+  "AGE" NUMBER (3,0),   
   "SEX" VARCHAR (2), 
   "MEMBER_COUNTY" NUMBER (5,0), 
   "MEMBER_STATE" VARCHAR (2), 
@@ -77,6 +77,5 @@ CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC" (
   "ADMIT_HOUR" VARCHAR (4), 
   "DISCHARGE_HOUR" VARCHAR (4), 
   "CLAIM_ ADJUSTMENT_LOGIC" VARCHAR (4), 
-  "AMT_COPAY" VARCHAR (4),
-  "IMPUTED_SERVICE_KEY" VARCHAR (50),
+  "IMPUTED_SERVICE_KEY" VARCHAR (50)
 );                                                                                                    
