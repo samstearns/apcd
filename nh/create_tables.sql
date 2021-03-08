@@ -1,7 +1,9 @@
 CREATE DATABASE NH_APCD COMMENT = 'NH Database';
 
+DROP TABLE IF EXISTS "NH_APCD"."PUBLIC"."REF_FORM_TYPE";
 CREATE TABLE "NH_APCD"."PUBLIC"."REF_FORM_TYPE" ("FORM_TYPE" VARCHAR (1), "FORM_TYPE_DESC" VARCHAR (100));
-                                                                                                    
+
+DROP TABLE IF EXISTS "NH_APCD"."PUBLIC"."REF_HCG";
 CREATE TABLE "NH_APCD"."PUBLIC"."REF_HCG" (
   "MR_LINE_CASE_KEY" VARCHAR (4), 
   "CODE_SET_YEAR" VARCHAR (4), 
@@ -13,7 +15,7 @@ CREATE TABLE "NH_APCD"."PUBLIC"."REF_HCG" (
   "HCG_DESC_02" VARCHAR (20)
 );                                                                                                    
 
-DROP TABLE IF EXISTS "NH_APCD"."PUBLIC"."CLAIM_MC"                                                                                                    
+DROP TABLE IF EXISTS "NH_APCD"."PUBLIC"."CLAIM_MC";                                                                                                    
 CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC" (
   "COVERAGE_CLASS" VARCHAR (3),
   "FROM_YEAR" VARCHAR (4), 
