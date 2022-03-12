@@ -83,4 +83,16 @@ CREATE TABLE "NH_APCD"."PUBLIC"."CLAIM_MC" (
   "DISCHARGE_HOUR" VARCHAR (4), 
   "CLAIM_ ADJUSTMENT_LOGIC" VARCHAR (4), 
   "IMPUTED_SERVICE_KEY" VARCHAR (50)
-);                                                                                                    
+);
+
+
+DROP TABLE IF EXISTS "NH_APCD"."public"."REF_PROVIDER";
+CREATE TABLE public."REF_PROVIDER" (
+  "PROV_KEY" NUMERIC (12), 
+  "PROV_CW_KEY" NUMERIC (20),
+  "FACILITY_ NAME" VARCHAR(255),
+  "PROV_TYPE" VARCHAR (20),
+  "PROV_TYPE_ORIG" VARCHAR (2),
+  "PROV_CLINIC_ STATE" VARCHAR (2),
+  "NH_COUNTY_CODE" NUMERIC (5)          
+);
