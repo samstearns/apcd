@@ -35,7 +35,6 @@ CREATE TABLE bene_summary (
   pppymt_car NUMERIC (10,2)
 );
 
-copy public."bene_summary" FROM '/path/DE1_0_2008_Beneficiary_Summary_File_Sample_1.csv' DELIMITER ',' CSV HEADER;
 
 
 
@@ -125,5 +124,86 @@ CREATE TABLE inpatient_claims (
   hcpcs_cd_45 varchar
 );
 
-copy public."inpatient_claims" FROM '/path/DE1_0_2008_to_2010_Inpatient_Claims_Sample_1.csv' DELIMITER ','
-CSV HEADER;
+DROP TABLE IF EXISTS outpatient_claims;
+CREATE TABLE outpatient_claims (
+  desynpuf_id varchar, 
+  clm_id varchar, 
+  segment bigint, 
+  clm_from_dt varchar, 
+  clm_thru_dt varchar, 
+  prvdr_num varchar, 
+  clm_pmt_amt numeric (10,2), 
+  nch_prmry_pyr_clm_pd_amt numeric (10,2), 
+  at_physn_npi varchar, 
+  op_physn_npi varchar, 
+  ot_physn_npi varchar, 
+  nch_bene_blood_ddctbl_lblty_am numeric (10,2), 
+  icd9_dgns_cd_1 varchar, 
+  icd9_dgns_cd_2 varchar, 
+  icd9_dgns_cd_3 varchar, 
+  icd9_dgns_cd_4 varchar, 
+  icd9_dgns_cd_5 varchar, 
+  icd9_dgns_cd_6 varchar, 
+  icd9_dgns_cd_7 varchar, 
+  icd9_dgns_cd_8 varchar, 
+  icd9_dgns_cd_9 varchar, 
+  icd9_dgns_cd_10 varchar, 
+  icd9_prcdr_cd_1 varchar, 
+  icd9_prcdr_cd_2 varchar, 
+  icd9_prcdr_cd_3 varchar, 
+  icd9_prcdr_cd_4 varchar, 
+  icd9_prcdr_cd_5 varchar, 
+  icd9_prcdr_cd_6 varchar, 
+  nch_bene_ptb_ddctbl_amt numeric (10,2), 
+  nch_bene_ptb_coinsrnc_amt numeric (10,2), 
+  admtng_icd9_dgns_cd varchar, 
+  hcpcs_cd_1 varchar, 
+  hcpcs_cd_2 varchar, 
+  hcpcs_cd_3 varchar, 
+  hcpcs_cd_4 varchar, 
+  hcpcs_cd_5 varchar, 
+  hcpcs_cd_6 varchar, 
+  hcpcs_cd_7 varchar, 
+  hcpcs_cd_8 varchar, 
+  hcpcs_cd_9 varchar, 
+  hcpcs_cd_10 varchar, 
+  hcpcs_cd_11 varchar, 
+  hcpcs_cd_12 varchar, 
+  hcpcs_cd_13 varchar, 
+  hcpcs_cd_14 varchar, 
+  hcpcs_cd_15 varchar, 
+  hcpcs_cd_16 varchar, 
+  hcpcs_cd_17 varchar, 
+  hcpcs_cd_18 varchar, 
+  hcpcs_cd_19 varchar, 
+  hcpcs_cd_20 varchar, 
+  hcpcs_cd_21 varchar, 
+  hcpcs_cd_22 varchar, 
+  hcpcs_cd_23 varchar, 
+  hcpcs_cd_24 varchar, 
+  hcpcs_cd_25 varchar, 
+  hcpcs_cd_26 varchar, 
+  hcpcs_cd_27 varchar, 
+  hcpcs_cd_28 varchar, 
+  hcpcs_cd_29 varchar, 
+  hcpcs_cd_30 varchar, 
+  hcpcs_cd_31 varchar, 
+  hcpcs_cd_32 varchar, 
+  hcpcs_cd_33 varchar, 
+  hcpcs_cd_34 varchar, 
+  hcpcs_cd_35 varchar, 
+  hcpcs_cd_36 varchar, 
+  hcpcs_cd_37 varchar, 
+  hcpcs_cd_38 varchar, 
+  hcpcs_cd_39 varchar, 
+  hcpcs_cd_40 varchar, 
+  hcpcs_cd_41 varchar, 
+  hcpcs_cd_42 varchar, 
+  hcpcs_cd_43 varchar, 
+  hcpcs_cd_44 varchar, 
+  hcpcs_cd_45 varchar
+);
+
+copy public."bene_summary" FROM '/path/DE1_0_2008_Beneficiary_Summary_File_Sample_1.csv' DELIMITER ',' CSV HEADER;
+copy public."outpatient_claims" FROM '/path/DE1_0_2008_to_2010_Outpatient_Claims_Sample_1.csv' DELIMITER ',' CSV HEADER;
+copy public."inpatient_claims" FROM '/path/DE1_0_2008_to_2010_Inpatient_Claims_Sample_1.csv' DELIMITER ',' CSV HEADER;
